@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    font-family: 'Libre Baskerville', serif;   
+    outline: none; 
+}
+
+html{
+    height:100%;
+}
+
+body{
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right,purple,skyblue);
+}
+
+.container{
+    width:350px;
+    height:500px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 1px 1px 8px gray;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+.account{
+    transform: translate(-70px,-20px)
+}
+
+.inner{
+    background-color: lavender;
+    border-radius: 25px;
+    padding:20px;
+    transform: translate(0px,-40px)
+}
+
+button{
+    background-color:purple;
+    color:white;
+    border-radius: 30px;
+    border:0px;
+    height:30px;
+    
+}
+
+input{
+    border-radius: 30px;
+    border: 2px solid rgb(0, 0, 0);
+    
+}
+button, input{
+    font-size: 15px;
+}
+
+.btn-l{
+    width:250px;
+}
+.btn-s{
+    width:100px;
+}
+
+button:hover{
+    cursor: pointer;
+    border:1px solid rgb(11, 228, 11);
+    box-shadow: 1px 0px 2px gray;
+}
+
+input[type=submit]{
+    background-color:purple;
+    color:white;
+    border-radius: 30px;
+    border:0px;
+    height:30px;
+    
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    border:1px solid rgb(11, 228, 11);
+    box-shadow: 1px 0px 2px gray;
+}

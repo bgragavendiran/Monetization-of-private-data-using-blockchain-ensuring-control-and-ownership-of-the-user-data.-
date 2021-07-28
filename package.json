@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "publish.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.4.2",
+    "geoip-lite": "^1.4.2",
+    "public-ip": "^4.0.3",
+    "puppeteer": "^8.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "streamr-client": "^4.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

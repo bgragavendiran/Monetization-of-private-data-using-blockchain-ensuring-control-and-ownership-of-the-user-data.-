@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src='./publish.js'></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="heading">Data Publisher</h1> 
+            <button class="enableEthereumButton btn-l">Enable Ethereum</button>
+            <h2 class="account">Account: <span class="showAccount"></span></h2>
+            <div class="inner">
+                <input id="web" type="text">
+                <button onclick="getScript()" class="btn-s">Get IPs</button>
+                <p id='test'></p>                
+            </div>
+            
+            <button onclick="publishData()" class="btn-l">Publish Data</button>
+            
+        </div>
+        <script>
+            if (typeof window.ethereum !== 'undefined') {
+  console.log('MetaMask is installed!');
+}
+            const ethereumButton = document.querySelector('.enableEthereumButton');
+const showAccount = document.querySelector('.showAccount');
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = ethereum.selectedAddress;
+}
+
+async function getScript(){
+    console.log("ulla");
+    var val=document.getElementById('web').value;
+    var link="https://www.whatsmydns.net/#NS/"+val;
+    console.log(link);
+    $('#test').append('<iframe src="'+link+'" width="700px" height="700px"> </iframe>');
+    $.get(link, function(response) {console.log(response)});
+    var url = "http://anyorigin.com/go?url=" + encodeURIComponent(link)+"&callback=?";$.get(url, function(response) {  console.log(response);});
+    
+}
+        </script>
+    </body>
+</html>
