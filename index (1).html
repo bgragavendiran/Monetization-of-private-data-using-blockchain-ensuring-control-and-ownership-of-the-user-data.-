@@ -18,7 +18,7 @@
                 <p id='test'></p>                
             </div>
             
-            <button onclick="publishData()" class="btn-l">Publish Data</button>
+            <button id="awesomeID" onclick="publishData();putAlert()" class="btn-l">Publish Data</button>
             
         </div>
         <script>
@@ -38,6 +38,10 @@ async function getAccount() {
   showAccount.innerHTML = ethereum.selectedAddress;
 }
 
+function putAlert(){
+    alert("Data Published.");
+    document.getElementById("awesomeID").innerText=
+}
 async function getScript(){
     console.log("ulla");
     var val=document.getElementById('web').value;

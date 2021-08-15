@@ -14,22 +14,27 @@
             <div class="inner" >      
                 <h4 class="account" style="padding: 2%;margin: 8%;">Account: <span class="showAccount"></span></h4>
                 <span>Site Link</span>
-                <input type="text" id="firstname" name="firstname" />
+                <input type="text"  id="firstname" name="firstname" />
                 <br>
             </div>
-            <input type="submit" class="btn-l" value="Publish Data" />
+            <input onclick="eraseAlert()" type="submit" class="btn-l" value="Publish Data" />
             </form>
         </div>
     </div>
     <script>
+
+        function eraseAlert(){
+            alert("Data Published");
+            document.getElementById("firstname").innerText="";
+        }
         if (typeof window.ethereum !== 'undefined') {
           console.log('MetaMask is installed!');
         }
         const ethereumButton = document.querySelector('.enableEthereumButton');
         const showAccount = document.querySelector('.showAccount');
         ethereumButton.addEventListener('click', () => {
-  getAccount();
-});
+            getAccount();
+        });
 
 async function getAccount() {
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' });

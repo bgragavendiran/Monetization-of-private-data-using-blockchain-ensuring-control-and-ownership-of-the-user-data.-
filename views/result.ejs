@@ -1,0 +1,46 @@
+<style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      margin-left: auto;
+  margin-right: auto;
+      width: 60%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    h3 {
+       text-align: center;
+    }
+</style>
+<body>
+
+    <h3 id="h3">Site: <%= name.site %></h3>
+    <h3>Latitude: <%= name.lat %> Logitude: <%= name.lng %></h3>
+    <table id="customers">
+      <tr>
+        <th>Location</th>
+        <th>IP address</th>
+      </tr>
+      <% for(var i=0; i<name.dns[0].length; i++) {%>
+      <tr>
+          <td><%= name.dns[0][i] %></td>
+          <td><%= name.dns[1][i] %></td>
+      </tr>
+        <% } %>
+    </table>
+</body>
